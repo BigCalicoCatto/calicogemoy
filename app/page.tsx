@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React from 'react';
 
 const colors = {
   brown: '#8B6F47',
@@ -50,38 +50,41 @@ const WhatsAppIcon = () => (
 );
 
 export default function FatCalicoPortfolio() {
-  const [hoveredCard, setHoveredCard] = useState<number | null>(null);
-
   return (
-    <div style={{ fontFamily: 'system-ui, -apple-system, sans-serif' }}>
+    <div style={{ fontFamily: 'system-ui, -apple-system, sans-serif', margin: 0, padding: 0 }}>
+      <style>{`
+        * { box-sizing: border-box; }
+        body { margin: 0; padding: 0; }
+      `}</style>
+
       {/* Banner */}
-      <div style={{ width: '100%', height: '300px', backgroundImage: 'url(https://i.imgur.com/NbKjb5g.png)', backgroundSize: 'cover', backgroundPosition: 'center' }} />
+      <div style={{ width: '100%', height: '200px', backgroundImage: 'url(https://i.imgur.com/NbKjb5g.png)', backgroundSize: 'cover', backgroundPosition: 'center' }} />
 
       {/* Hero Section */}
-      <div style={{ width: '100%', padding: '40px 20px', backgroundColor: colors.cream }}>
+      <div style={{ width: '100%', padding: '24px 16px', backgroundColor: colors.cream }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 2fr', gap: '40px', alignItems: 'center', marginBottom: '40px' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
             <div style={{ display: 'flex', justifyContent: 'center' }}>
-              <img src="https://i.imgur.com/XRbDzZH.png" alt="Fat Calico" style={{ width: '280px', height: '280px', objectFit: 'cover' }} />
+              <img src="https://i.imgur.com/XRbDzZH.png" alt="Fat Calico" style={{ width: '200px', height: '200px', objectFit: 'cover' }} />
             </div>
-            <div style={{ textAlign: 'left' }}>
-              <h1 style={{ fontSize: '48px', fontWeight: 'bold', color: colors.darkText, margin: '0 0 10px 0' }}>Fat Calico</h1>
-              <p style={{ fontSize: '18px', color: colors.orange, marginBottom: '20px', fontWeight: '600' }}>Travel and Foodie Meowger</p>
-              <p style={{ fontSize: '16px', color: colors.darkText, lineHeight: '1.6', marginBottom: '30px' }}>Not your average catfluencer 🐾 I review mamak stalls 🍜, chase sunsets 🌅, and nap in boutique hotels 💤. Travel light ✈️ Eat everything 🍛 Judge nothing (except bad teh tarik ☕️).</p>
-              <div style={{ display: 'flex', gap: '12px', marginBottom: '30px', flexWrap: 'wrap' }}>
-                <a href="https://instagram.com/fatcalico" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '10px 20px', backgroundColor: colors.instagramPink, color: colors.white, textDecoration: 'none', borderRadius: '20px', fontSize: '14px', fontWeight: '600' }}>
+            <div style={{ textAlign: 'center' }}>
+              <h1 style={{ fontSize: '32px', fontWeight: 'bold', color: colors.darkText, margin: '0 0 8px 0' }}>Fat Calico</h1>
+              <p style={{ fontSize: '16px', color: colors.orange, marginBottom: '14px', fontWeight: '600' }}>Travel and Foodie Meowger</p>
+              <p style={{ fontSize: '14px', color: colors.darkText, lineHeight: '1.6', marginBottom: '18px' }}>Not your average catfluencer 🐾 I review mamak stalls 🍜, chase sunsets 🌅, and nap in boutique hotels 💤. Travel light ✈️ Eat everything 🍛 Judge nothing (except bad teh tarik ☕️).</p>
+              <div style={{ display: 'flex', gap: '8px', marginBottom: '16px', flexWrap: 'wrap', justifyContent: 'center' }}>
+                <a href="https://instagram.com/fatcalico" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', padding: '8px 14px', backgroundColor: colors.instagramPink, color: colors.white, textDecoration: 'none', borderRadius: '18px', fontSize: '13px', fontWeight: '600' }}>
                   <InstagramIcon /> Instagram
                 </a>
-                <a href="https://tiktok.com/@fatcalico" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '10px 20px', backgroundColor: colors.tiktokBlack, color: colors.white, textDecoration: 'none', borderRadius: '20px', fontSize: '14px', fontWeight: '600' }}>
+                <a href="https://tiktok.com/@fatcalico" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', padding: '8px 14px', backgroundColor: colors.tiktokBlack, color: colors.white, textDecoration: 'none', borderRadius: '18px', fontSize: '13px', fontWeight: '600' }}>
                   <TikTokIcon /> TikTok
                 </a>
-                <a href="https://youtube.com/@fatcalico" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '10px 20px', backgroundColor: colors.youtubeRed, color: colors.white, textDecoration: 'none', borderRadius: '20px', fontSize: '14px', fontWeight: '600' }}>
+                <a href="https://youtube.com/@fatcalico" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', padding: '8px 14px', backgroundColor: colors.youtubeRed, color: colors.white, textDecoration: 'none', borderRadius: '18px', fontSize: '13px', fontWeight: '600' }}>
                   <YouTubeIcon /> YouTube
                 </a>
               </div>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-                <button style={{ width: '100%', padding: '14px 20px', backgroundColor: colors.orange, color: colors.white, border: 'none', borderRadius: '20px', fontSize: '14px', fontWeight: '600', cursor: 'pointer' }}>10% with FatCalico code on HungryCatto Cafe</button>
-                <button style={{ width: '100%', padding: '14px 20px', backgroundColor: colors.desertPink, color: colors.darkText, border: 'none', borderRadius: '20px', fontSize: '14px', fontWeight: '600', cursor: 'pointer' }}>RM20 voucher for TravelNeko</button>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                <button style={{ width: '100%', padding: '12px 16px', backgroundColor: colors.orange, color: colors.white, border: 'none', borderRadius: '18px', fontSize: '13px', fontWeight: '600', cursor: 'pointer' }}>10% with FatCalico code on HungryCatto Cafe</button>
+                <button style={{ width: '100%', padding: '12px 16px', backgroundColor: colors.desertPink, color: colors.darkText, border: 'none', borderRadius: '18px', fontSize: '13px', fontWeight: '600', cursor: 'pointer' }}>RM20 voucher for TravelNeko</button>
               </div>
             </div>
           </div>
@@ -89,12 +92,12 @@ export default function FatCalicoPortfolio() {
       </div>
 
       {/* My Favourite Work */}
-      <div style={{ width: '100%', padding: '40px 20px', backgroundColor: colors.white }}>
+      <div style={{ width: '100%', padding: '24px 16px', backgroundColor: colors.white }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-          <h2 style={{ fontSize: '36px', fontWeight: 'bold', color: colors.darkText, marginBottom: '30px', textAlign: 'center' }}>My Favourite Work</h2>
-          <div style={{ display: 'flex', gap: '20px', overflowX: 'auto', paddingBottom: '20px' }}>
+          <h2 style={{ fontSize: '28px', fontWeight: 'bold', color: colors.darkText, marginBottom: '18px', textAlign: 'center' }}>My Favourite Work</h2>
+          <div style={{ display: 'flex', gap: '12px', overflowX: 'auto', paddingBottom: '12px', WebkitOverflowScrolling: 'touch' }}>
             {['https://i.imgur.com/r9I72OQ.png', 'https://i.imgur.com/AnmSPH2.png', 'https://i.imgur.com/HZ29Qxb.png'].map((img, idx) => (
-              <div key={idx} style={{ flexShrink: 0, width: '220px', aspectRatio: '4/5', borderRadius: '18px', overflow: 'hidden', cursor: 'pointer', boxShadow: '0 4px 12px rgba(0,0,0,0.1)' }}>
+              <div key={idx} style={{ flexShrink: 0, width: '160px', aspectRatio: '4/5', borderRadius: '14px', overflow: 'hidden', boxShadow: '0 2px 8px rgba(0,0,0,0.1)' }}>
                 <img src={img} alt={`Work ${idx + 1}`} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               </div>
             ))}
@@ -103,30 +106,30 @@ export default function FatCalicoPortfolio() {
       </div>
 
       {/* Foodie Vlog */}
-      <div style={{ width: '100%', padding: '40px 20px', backgroundColor: colors.cream }}>
+      <div style={{ width: '100%', padding: '24px 16px', backgroundColor: colors.cream }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-          <h2 style={{ fontSize: '36px', fontWeight: 'bold', color: colors.darkText, marginBottom: '30px', textAlign: 'center' }}>Foodie Vlog!</h2>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1.2fr', gap: '16px' }}>
-            <div style={{ aspectRatio: '1/1', borderRadius: '16px', overflow: 'hidden' }}>
+          <h2 style={{ fontSize: '28px', fontWeight: 'bold', color: colors.darkText, marginBottom: '18px', textAlign: 'center' }}>Foodie Vlog!</h2>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.2fr', gap: '12px', gridAutoRows: 'auto' }}>
+            <div style={{ aspectRatio: '4/5', borderRadius: '12px', overflow: 'hidden' }}>
               <img src="https://i.imgur.com/r9I72OQ.png" alt="Foodie" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
             </div>
-            <div style={{ aspectRatio: '1/1', borderRadius: '16px', overflow: 'hidden' }}>
-              <img src="https://i.imgur.com/HZ29Qxb.png" alt="Foodie" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-            </div>
-            <div style={{ gridColumn: '3', gridRow: '1 / 3', aspectRatio: '4/5', borderRadius: '16px', overflow: 'hidden' }}>
+            <div style={{ gridColumn: '2', gridRow: '1 / 3', aspectRatio: '4/5', borderRadius: '12px', overflow: 'hidden' }}>
               <img src="https://i.imgur.com/JkV2l6n.png" alt="Foodie Large" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+            </div>
+            <div style={{ aspectRatio: '4/5', borderRadius: '12px', overflow: 'hidden' }}>
+              <img src="https://i.imgur.com/HZ29Qxb.png" alt="Foodie" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
             </div>
           </div>
         </div>
       </div>
 
       {/* Travel Lens */}
-      <div style={{ width: '100%', padding: '40px 20px', backgroundColor: colors.white }}>
+      <div style={{ width: '100%', padding: '24px 16px', backgroundColor: colors.white }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-          <h2 style={{ fontSize: '36px', fontWeight: 'bold', color: colors.darkText, marginBottom: '30px', textAlign: 'center' }}>Travel Lens!</h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '16px' }}>
+          <h2 style={{ fontSize: '28px', fontWeight: 'bold', color: colors.darkText, marginBottom: '18px', textAlign: 'center' }}>Travel Lens!</h2>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '12px' }}>
             {['https://i.imgur.com/AnmSPH2.png', 'https://i.imgur.com/HYIzRpY.png', 'https://i.imgur.com/nOoMeIX.png'].map((img, idx) => (
-              <div key={idx} style={{ aspectRatio: '1/1', borderRadius: '16px', overflow: 'hidden' }}>
+              <div key={idx} style={{ aspectRatio: '1/1', borderRadius: '12px', overflow: 'hidden' }}>
                 <img src={img} alt="Travel" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               </div>
             ))}
@@ -135,9 +138,9 @@ export default function FatCalicoPortfolio() {
       </div>
 
       {/* Work With Me */}
-      <div style={{ width: '100%', padding: '40px 20px', backgroundColor: colors.softPink }}>
+      <div style={{ width: '100%', padding: '24px 16px', backgroundColor: colors.softPink }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-          <h2 style={{ fontSize: '36px', fontWeight: 'bold', color: colors.darkText, marginBottom: '30px', textAlign: 'center' }}>Work With Me</h2>
+          <h2 style={{ fontSize: '28px', fontWeight: 'bold', color: colors.darkText, marginBottom: '18px', textAlign: 'center' }}>Work With Me</h2>
           <div>
             {[
               { rate: 'RM 150', service: '1 IG Reels (+/- TikTok post) + 1 IG Story', desc: 'Draft submission and revision' },
@@ -148,12 +151,10 @@ export default function FatCalicoPortfolio() {
               { rate: 'Private Coaching', service: 'From RM90/class', desc: '' },
               { rate: 'Small Group Coaching', service: 'RM30/class', desc: '' },
             ].map((item, idx) => (
-              <div key={idx} style={{ display: 'grid', gridTemplateColumns: '1fr 2fr', gap: '40px', padding: '20px 0', borderBottom: idx < 6 ? `1px solid ${colors.desertPink}` : 'none' }}>
-                <p style={{ fontSize: '16px', fontWeight: 'bold', color: colors.darkText, margin: 0 }}>{item.rate}</p>
-                <div style={{ textAlign: 'left' }}>
-                  <p style={{ fontSize: '16px', fontWeight: '600', color: colors.darkText, margin: '0 0 4px 0' }}>{item.service}</p>
-                  {item.desc && <p style={{ fontSize: '14px', color: colors.darkText, opacity: 0.7, margin: 0 }}>{item.desc}</p>}
-                </div>
+              <div key={idx} style={{ padding: '14px 0', borderBottom: idx < 6 ? `1px solid ${colors.desertPink}` : 'none' }}>
+                <p style={{ fontSize: '14px', fontWeight: 'bold', color: colors.darkText, margin: '0 0 6px 0' }}>{item.rate}</p>
+                <p style={{ fontSize: '13px', fontWeight: '600', color: colors.darkText, margin: '0 0 3px 0' }}>{item.service}</p>
+                {item.desc && <p style={{ fontSize: '12px', color: colors.darkText, opacity: 0.7, margin: 0 }}>{item.desc}</p>}
               </div>
             ))}
           </div>
@@ -161,20 +162,20 @@ export default function FatCalicoPortfolio() {
       </div>
 
       {/* What Clients Say */}
-      <div style={{ width: '100%', padding: '40px 20px', backgroundColor: colors.cream }}>
+      <div style={{ width: '100%', padding: '24px 16px', backgroundColor: colors.cream }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-          <h2 style={{ fontSize: '36px', fontWeight: 'bold', color: colors.darkText, marginBottom: '30px', textAlign: 'center' }}>What Clients Say</h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '24px' }}>
+          <h2 style={{ fontSize: '28px', fontWeight: 'bold', color: colors.darkText, marginBottom: '18px', textAlign: 'center' }}>What Clients Say</h2>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
             {[
               { name: 'Sarah Tan', position: 'Marketing Manager at Mamak Express', quote: 'We didn\'t even know one of our menu items was actually the star of our restaurant until Fat Calico posted it online! Sales went up 40%.' },
               { name: 'James Lee', position: 'Travel Agency Director at WanderAsia Co.', quote: 'Fat Calico\'s authentic travel content brought our boutique hotel to life. Guests specifically asked to stay in the rooms featured in the posts!' },
               { name: 'Maya Krishnan', position: 'Brand Head at TravelNeko Tours', quote: 'Partnering with Fat Calico was the best decision. The engagement rate was insane and the audience felt genuine and loyal.' },
             ].map((review, idx) => (
-              <div key={idx} style={{ backgroundColor: colors.white, padding: '24px', borderRadius: '16px', boxShadow: '0 4px 12px rgba(0,0,0,0.1)' }}>
-                <p style={{ fontSize: '16px', color: colors.orange, marginBottom: '12px' }}>⭐⭐⭐⭐⭐</p>
-                <p style={{ fontSize: '14px', fontStyle: 'italic', color: colors.darkText, lineHeight: '1.6', marginBottom: '16px' }}>"{review.quote}"</p>
-                <p style={{ fontSize: '14px', fontWeight: 'bold', color: colors.orange, margin: '0 0 4px 0' }}>{review.name}</p>
-                <p style={{ fontSize: '12px', color: colors.darkText, opacity: 0.6, margin: 0 }}>{review.position}</p>
+              <div key={idx} style={{ backgroundColor: colors.white, padding: '14px', borderRadius: '12px', boxShadow: '0 2px 8px rgba(0,0,0,0.1)' }}>
+                <p style={{ fontSize: '13px', color: colors.orange, marginBottom: '8px', margin: '0 0 8px 0' }}>⭐⭐⭐⭐⭐</p>
+                <p style={{ fontSize: '13px', fontStyle: 'italic', color: colors.darkText, lineHeight: '1.5', marginBottom: '10px', margin: '0 0 10px 0' }}>"{review.quote}"</p>
+                <p style={{ fontSize: '13px', fontWeight: 'bold', color: colors.orange, margin: '0 0 2px 0' }}>{review.name}</p>
+                <p style={{ fontSize: '11px', color: colors.darkText, opacity: 0.6, margin: 0 }}>{review.position}</p>
               </div>
             ))}
           </div>
@@ -182,32 +183,32 @@ export default function FatCalicoPortfolio() {
       </div>
 
       {/* CTA Section */}
-      <div style={{ width: '100%', padding: '40px 20px', backgroundColor: colors.white }}>
+      <div style={{ width: '100%', padding: '24px 16px', backgroundColor: colors.white }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-          <div style={{ display: 'grid', gridTemplateColumns: '1.5fr 1fr', gap: '60px', alignItems: 'center' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: '1.5fr 1fr', gap: '20px', alignItems: 'center' }}>
             <div style={{ textAlign: 'left' }}>
-              <h2 style={{ fontSize: '32px', fontWeight: 'bold', color: colors.darkText, marginBottom: '30px', lineHeight: '1.3' }}>Come and say hi to your warmest Calico and see what we can achieve together</h2>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-                <a href="mailto:fatcalico@example.com" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px', padding: '14px 20px', backgroundColor: colors.orange, color: colors.white, textDecoration: 'none', borderRadius: '20px', fontSize: '14px', fontWeight: '600' }}>
-                  <MailIcon /> Email Me
+              <h2 style={{ fontSize: '24px', fontWeight: 'bold', color: colors.darkText, marginBottom: '14px', lineHeight: '1.3' }}>Come and say hi to your warmest Calico and see what we can achieve together</h2>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', width: '100%' }}>
+                <a href="mailto:fatcalico@example.com" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px', padding: '12px 16px', backgroundColor: colors.orange, color: colors.white, textDecoration: 'none', borderRadius: '18px', fontSize: '13px', fontWeight: '600' }}>
+                  <MailIcon /> Email
                 </a>
-                <a href="https://wa.me/60123456789" target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px', padding: '14px 20px', backgroundColor: colors.whatsappGreen, color: colors.white, textDecoration: 'none', borderRadius: '20px', fontSize: '14px', fontWeight: '600' }}>
+                <a href="https://wa.me/60123456789" target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px', padding: '12px 16px', backgroundColor: colors.whatsappGreen, color: colors.white, textDecoration: 'none', borderRadius: '18px', fontSize: '13px', fontWeight: '600' }}>
                   <WhatsAppIcon /> WhatsApp
                 </a>
-                <a href="https://instagram.com/fatcalico" target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px', padding: '14px 20px', backgroundColor: colors.instagramPink, color: colors.white, textDecoration: 'none', borderRadius: '20px', fontSize: '14px', fontWeight: '600' }}>
+                <a href="https://instagram.com/fatcalico" target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px', padding: '12px 16px', backgroundColor: colors.instagramPink, color: colors.white, textDecoration: 'none', borderRadius: '18px', fontSize: '13px', fontWeight: '600' }}>
                   <InstagramIcon /> DM on Instagram
                 </a>
               </div>
             </div>
             <div style={{ display: 'flex', justifyContent: 'center' }}>
-              <img src="https://i.imgur.com/XRbDzZH.png" alt="Fat Calico" style={{ width: '280px', height: '280px', objectFit: 'cover', borderRadius: '16px', boxShadow: '0 8px 24px rgba(0,0,0,0.15)' }} />
+              <img src="https://i.imgur.com/XRbDzZH.png" alt="Fat Calico" style={{ width: '180px', height: '180px', objectFit: 'cover', borderRadius: '12px', boxShadow: '0 4px 16px rgba(0,0,0,0.15)' }} />
             </div>
           </div>
         </div>
       </div>
 
       {/* Footer */}
-      <footer style={{ backgroundColor: colors.brown, color: colors.white, padding: '30px 20px', textAlign: 'center', fontSize: '13px' }}>
+      <footer style={{ backgroundColor: colors.brown, color: colors.white, padding: '18px 16px', textAlign: 'center', fontSize: '12px' }}>
         © 2025 Fat Calico engineered by FatCalicoBoy
       </footer>
     </div>
