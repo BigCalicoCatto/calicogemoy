@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Instagram, Music, Youtube, Mail, MessageCircle } from 'lucide-react';
 
 const colors = {
   brown: '#8B6F47',
@@ -16,6 +15,46 @@ const colors = {
   youtubeRed: '#FF0000',
   whatsappGreen: '#25D366',
 };
+
+// SVG Icons
+const InstagramIcon = () => (
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+    <circle cx="17.5" cy="6.5" r="1.5"></circle>
+  </svg>
+);
+
+const TikTokIcon = () => (
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.68v13.7a2.4 2.4 0 1 1-2.4-2.4c.4 0 .8.1 1.1.3V7.3a6.04 6.04 0 0 0-1.1-.1A6 6 0 1 0 17 13.6V9.62a7.82 7.82 0 0 0 2.59 1.07V6.69Z"></path>
+  </svg>
+);
+
+const YouTubeIcon = () => (
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path>
+  </svg>
+);
+
+const MailIcon = () => (
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+    <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+  </svg>
+);
+
+const WhatsAppIcon = () => (
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a5.5 5.5 0 1 0 5.504 5.5 5.467 5.467 0 0 0-5.5-5.5" transform="scale(1.2)"></path>
+  </svg>
+);
+
+const MessageIcon = () => (
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+  </svg>
+);
 
 export default function FatCalicoPortfolio() {
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
@@ -37,13 +76,6 @@ export default function FatCalicoPortfolio() {
     color: colors.darkText,
     marginBottom: '30px',
     fontFamily: 'system-ui, -apple-system, sans-serif',
-  };
-
-  const subHeadingStyle: React.CSSProperties = {
-    fontSize: '20px',
-    fontWeight: '600',
-    color: colors.orange,
-    marginBottom: '20px',
   };
 
   return (
@@ -158,7 +190,7 @@ export default function FatCalicoPortfolio() {
                     (e.currentTarget as HTMLElement).style.transform = 'scale(1)';
                   }}
                 >
-                  <Instagram size={18} />
+                  <InstagramIcon />
                   Instagram
                 </a>
                 <a
@@ -186,7 +218,7 @@ export default function FatCalicoPortfolio() {
                     (e.currentTarget as HTMLElement).style.transform = 'scale(1)';
                   }}
                 >
-                  <Music size={18} />
+                  <TikTokIcon />
                   TikTok
                 </a>
                 <a
@@ -214,7 +246,7 @@ export default function FatCalicoPortfolio() {
                     (e.currentTarget as HTMLElement).style.transform = 'scale(1)';
                   }}
                 >
-                  <Youtube size={18} />
+                  <YouTubeIcon />
                   YouTube
                 </a>
               </div>
@@ -637,7 +669,7 @@ export default function FatCalicoPortfolio() {
                     (e.currentTarget as HTMLElement).style.transform = 'scale(1)';
                   }}
                 >
-                  <Mail size={18} />
+                  <MailIcon />
                   Email Me
                 </a>
                 <a
@@ -665,7 +697,7 @@ export default function FatCalicoPortfolio() {
                     (e.currentTarget as HTMLElement).style.transform = 'scale(1)';
                   }}
                 >
-                  <MessageCircle size={18} />
+                  <WhatsAppIcon />
                   WhatsApp
                 </a>
                 <a
@@ -688,47 +720,3 @@ export default function FatCalicoPortfolio() {
                   }}
                   onMouseEnter={(e) => {
                     (e.currentTarget as HTMLElement).style.transform = 'scale(1.02)';
-                  }}
-                  onMouseLeave={(e) => {
-                    (e.currentTarget as HTMLElement).style.transform = 'scale(1)';
-                  }}
-                >
-                  <Instagram size={18} />
-                  DM on Instagram
-                </a>
-              </div>
-            </div>
-
-            {/* Right Column */}
-            <div style={{ display: 'flex', justifyContent: 'center' }}>
-              <img
-                src="https://i.imgur.com/XRbDzZH.png"
-                alt="Fat Calico"
-                style={{
-                  width: '280px',
-                  height: '280px',
-                  objectFit: 'cover',
-                  borderRadius: '16px',
-                  boxShadow: '0 8px 24px rgba(0,0,0,0.15)',
-                }}
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Footer */}
-      <footer
-        style={{
-          backgroundColor: colors.brown,
-          color: colors.white,
-          padding: '30px 20px',
-          textAlign: 'center',
-          fontSize: '13px',
-        }}
-      >
-        © 2025 Fat Calico engineered by FatCalicoBoy
-      </footer>
-    </div>
-  );
-}
