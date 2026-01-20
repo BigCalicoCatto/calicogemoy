@@ -65,7 +65,7 @@ export default function FatCalicoPortfolio() {
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
             <div style={{ display: 'flex', justifyContent: 'center' }}>
-              <img src="https://i.imgur.com/XRbDzZH.png" alt="Fat Calico" style={{ width: '200px', height: '200px', objectFit: 'cover' }} />
+              <img src="https://i.imgur.com/XRbDzZH.png" alt="Fat Calico" style={{ width: '200px', height: '200px', objectFit: 'cover', borderRadius: '50%' }} />
             </div>
             <div style={{ textAlign: 'center' }}>
               <h1 style={{ fontSize: '32px', fontWeight: 'bold', color: colors.darkText, margin: '0 0 8px 0' }}>Fat Calico</h1>
@@ -127,12 +127,16 @@ export default function FatCalicoPortfolio() {
       <div style={{ width: '100%', padding: '24px 16px', backgroundColor: colors.white }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
           <h2 style={{ fontSize: '28px', fontWeight: 'bold', color: colors.darkText, marginBottom: '18px', textAlign: 'center' }}>Travel Lens!</h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '12px' }}>
-            {['https://i.imgur.com/AnmSPH2.png', 'https://i.imgur.com/HYIzRpY.png', 'https://i.imgur.com/nOoMeIX.png'].map((img, idx) => (
-              <div key={idx} style={{ aspectRatio: '1/1', borderRadius: '12px', overflow: 'hidden' }}>
-                <img src={img} alt="Travel" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-              </div>
-            ))}
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.2fr', gap: '12px', gridAutoRows: 'auto' }}>
+            <div style={{ aspectRatio: '1/1', borderRadius: '12px', overflow: 'hidden' }}>
+              <img src="https://i.imgur.com/AnmSPH2.png" alt="Travel" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+            </div>
+            <div style={{ gridColumn: '2', gridRow: '1 / 3', aspectRatio: '1/1', borderRadius: '12px', overflow: 'hidden' }}>
+              <img src="https://i.imgur.com/nOoMeIX.png" alt="Travel Large" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+            </div>
+            <div style={{ aspectRatio: '1/1', borderRadius: '12px', overflow: 'hidden' }}>
+              <img src="https://i.imgur.com/HYIzRpY.png" alt="Travel" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+            </div>
           </div>
         </div>
       </div>
@@ -201,7 +205,7 @@ export default function FatCalicoPortfolio() {
               </div>
             </div>
             <div style={{ display: 'flex', justifyContent: 'center' }}>
-              <img src="https://i.imgur.com/XRbDzZH.png" alt="Fat Calico" style={{ width: '180px', height: '180px', objectFit: 'cover', borderRadius: '12px', boxShadow: '0 4px 16px rgba(0,0,0,0.15)' }} />
+              <img src="https://i.imgur.com/XRbDzZH.png" alt="Fat Calico" style={{ width: '180px', height: '180px', borderRadius: '50%', boxShadow: '0 4px 16px rgba(0,0,0,0.15)', objectFit: 'cover' }} />
             </div>
           </div>
         </div>
