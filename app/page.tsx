@@ -109,11 +109,11 @@ export default function FatCalicoPortfolio() {
       <div style={{ width: '100%', padding: '24px 16px', backgroundColor: colors.cream }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
           <h2 style={{ fontSize: '28px', fontWeight: 'bold', color: colors.darkText, marginBottom: '18px', textAlign: 'center' }}>Foodie Vlog!</h2>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.2fr', gap: '12px', gridAutoRows: 'auto' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.2fr', gap: '12px', gridAutoRows: 'minmax(0, 1fr)' }}>
             <div style={{ aspectRatio: '4/5', borderRadius: '12px', overflow: 'hidden' }}>
               <img src="https://i.imgur.com/r9I72OQ.png" alt="Foodie" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
             </div>
-            <div style={{ gridColumn: '2', gridRow: '1 / 3', aspectRatio: '4/5', borderRadius: '12px', overflow: 'hidden' }}>
+            <div style={{ gridColumn: '2', gridRow: '1 / 3', borderRadius: '12px', overflow: 'hidden' }}>
               <img src="https://i.imgur.com/JkV2l6n.png" alt="Foodie Large" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
             </div>
             <div style={{ aspectRatio: '4/5', borderRadius: '12px', overflow: 'hidden' }}>
@@ -127,11 +127,11 @@ export default function FatCalicoPortfolio() {
       <div style={{ width: '100%', padding: '24px 16px', backgroundColor: colors.white }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
           <h2 style={{ fontSize: '28px', fontWeight: 'bold', color: colors.darkText, marginBottom: '18px', textAlign: 'center' }}>Travel Lens!</h2>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.2fr', gap: '12px', gridAutoRows: 'auto' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.2fr', gap: '12px', gridAutoRows: 'minmax(0, 1fr)' }}>
             <div style={{ aspectRatio: '1/1', borderRadius: '12px', overflow: 'hidden' }}>
               <img src="https://i.imgur.com/AnmSPH2.png" alt="Travel" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
             </div>
-            <div style={{ gridColumn: '2', gridRow: '1 / 3', aspectRatio: '1/1', borderRadius: '12px', overflow: 'hidden' }}>
+            <div style={{ gridColumn: '2', gridRow: '1 / 3', borderRadius: '12px', overflow: 'hidden' }}>
               <img src="https://i.imgur.com/nOoMeIX.png" alt="Travel Large" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
             </div>
             <div style={{ aspectRatio: '1/1', borderRadius: '12px', overflow: 'hidden' }}>
